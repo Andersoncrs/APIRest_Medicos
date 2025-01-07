@@ -32,7 +32,7 @@ public class MedicoService {
 
     public PagedModel<EntityModel<ListarMedico>> ListarMedico(Pageable pageable){
         Pageable pageableConf = PageRequest.of(pageable.getPageNumber(), 2, Sort.by("nombre").ascending());
-        Page<ListarMedico> listarMedicoPage =  medicoRepository.findAll(pageableConf).map(ListarMedico::new);
+        Page<ListarMedico> listarMedicoPage =  medicoRepository.listarMedicos(pageableConf).map(ListarMedico::new);
         return pagedResourcesAssembler.toModel(listarMedicoPage);
     }
 
