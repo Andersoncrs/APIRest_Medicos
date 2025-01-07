@@ -1,4 +1,10 @@
 package com.hospital.apihospital.Direccion;
 
-public class DatosDireccion {
+public record DatosDireccion(
+        String ciudad,
+        String calle,
+        String carrera,
+        String complemento,
+        String letraComplemento
+) {
 }
