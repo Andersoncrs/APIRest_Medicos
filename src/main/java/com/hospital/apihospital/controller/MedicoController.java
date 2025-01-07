@@ -1,5 +1,7 @@
 package com.hospital.apihospital.controller;
 
+import com.hospital.apihospital.Medico.DatosRegistroMedico;
+import jakarta.validation.Valid;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -11,7 +13,8 @@ public class MedicoController {
     }
 
     @PostMapping
-    public void registrarMedico(){
+    public void registrarMedico(@Valid @RequestBody DatosRegistroMedico datosRegistroMedico){
+        System.out.println(datosRegistroMedico);
     }
 
     @PatchMapping
