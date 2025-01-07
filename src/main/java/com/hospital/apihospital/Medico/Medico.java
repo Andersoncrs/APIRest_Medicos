@@ -3,13 +3,19 @@ package com.hospital.apihospital.Medico;
 import com.hospital.apihospital.Direccion.Direccion;
 import com.hospital.apihospital.Genero.Genero;
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
 
+@NoArgsConstructor
+@Getter
 @Entity
 @Table(name = "medicos")
 public class Medico {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
 
     private String nombre;
     private String email;
