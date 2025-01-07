@@ -15,10 +15,22 @@ public class Medico {
     private String email;
     private String telefono;
     private int edad;
-    Genero genero;
-    Especialidad especialidad;
+
+    @Enumerated(value = EnumType.STRING)
+    private Genero genero;
+
+    @Enumerated(value = EnumType.STRING)
+    private Especialidad especialidad;
     @Embedded
-    Direccion direccion;
+    private Direccion direccion;
 
-
+    public Medico(DatosRegistroMedico datosRegistroMedico) {
+        this.nombre = datosRegistroMedico.nombre();
+        this.email = datosRegistroMedico.email();
+        this.telefono = datosRegistroMedico.telefono();
+        this.edad = Integer.parseInt(datosRegistroMedico.edad());
+        this.genero = Genero.ofString(datosRegistroMedico.genero());
+        this.especialidad = Especialidad.ofString(datosRegistroMedico.especialidad());
+        this.direccion = new Direccion(datosRegistroMedico.direccion());
+    }
 }
