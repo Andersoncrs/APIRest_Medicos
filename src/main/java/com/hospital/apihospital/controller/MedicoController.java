@@ -34,7 +34,7 @@ public class MedicoController {
 
     @DeleteMapping("/{id}")
     public void eliminarMedico(@PathVariable Long id){
-//        service.eliminarRegistro(id);
+        service.eliminarRegistroMedico(id);
     }
 
 

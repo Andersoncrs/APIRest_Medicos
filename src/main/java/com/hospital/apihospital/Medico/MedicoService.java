@@ -73,4 +73,11 @@ public class MedicoService {
         }
         return ResponseEntity.badRequest().body("No se encuentra el Registro");
     }
+
+    public void eliminarRegistroMedico(Long id) {
+        Optional<Medico> medicoOptional = medicoRepository.findById(id);
+        if(medicoOptional.isPresent()){
+            Medico medico = medicoOptional.get();
+        }
+    }
 }
