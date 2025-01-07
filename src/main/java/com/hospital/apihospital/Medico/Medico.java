@@ -5,6 +5,7 @@ import com.hospital.apihospital.Genero.Genero;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @NoArgsConstructor
 @Getter
@@ -16,7 +17,7 @@ public class Medico {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-
+    @Setter
     private String nombre;
     private String email;
     private String telefono;
@@ -25,9 +26,11 @@ public class Medico {
     @Enumerated(value = EnumType.STRING)
     private Genero genero;
 
+    @Setter
     @Enumerated(value = EnumType.STRING)
     private Especialidad especialidad;
     @Embedded
+    @Setter
     private Direccion direccion;
 
     public Medico(DatosRegistroMedico datosRegistroMedico) {

@@ -24,16 +24,17 @@ public class MedicoController {
 
     @PostMapping
     public ResponseEntity<String> registrarMedico(@Valid @RequestBody DatosRegistroMedico datosRegistroMedico){
-        System.out.println(datosRegistroMedico);
         return service.registrarMedico(datosRegistroMedico);
     }
 
     @PatchMapping
-    public void actalizarMedico(){
+    public ResponseEntity<Object> actalizarMedico(@Valid @RequestBody DatosActualizarMedico datosActualizarMedico){
+        return service.ActualizarDatosMedico(datosActualizarMedico);
     }
 
-    @DeleteMapping
-    public void eliminarMedico(){
+    @DeleteMapping("/{id}")
+    public void eliminarMedico(@PathVariable Long id){
+//        service.eliminarRegistro(id);
     }
 
 
