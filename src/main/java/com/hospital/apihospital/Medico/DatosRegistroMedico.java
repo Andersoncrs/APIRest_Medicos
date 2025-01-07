@@ -6,7 +6,7 @@ import jakarta.validation.constraints.*;
 
 public record DatosRegistroMedico(
         @NotBlank
-        @Pattern(regexp = "^[a-zA-Z]{3,}\\s[a-zA-Z]{1,}$")
+        @Pattern(regexp = "^[a-zA-Z]{3,}\\s[a-zA-Z]+$")
         String nombre,
 
         @NotBlank

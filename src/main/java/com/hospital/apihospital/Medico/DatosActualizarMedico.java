@@ -1,9 +1,7 @@
 package com.hospital.apihospital.Medico;
 
 import com.hospital.apihospital.Direccion.DatosActualizarDireccion;
-import com.hospital.apihospital.Direccion.DatosDireccion;
 import jakarta.validation.Valid;
-import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Pattern;
 

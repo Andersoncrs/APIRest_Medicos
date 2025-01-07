@@ -1,6 +1,5 @@
 package com.hospital.apihospital.Direccion;
 
-import jakarta.validation.Valid;
 import jakarta.validation.constraints.*;
 
 public record DatosDireccion(
