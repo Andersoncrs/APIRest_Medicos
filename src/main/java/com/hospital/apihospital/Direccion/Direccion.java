@@ -9,7 +9,7 @@ public class Direccion {
     private String ciudad;
     private int calle;
     private int carrera;
-    private int complemento;
+    private Integer complemento;
     private String letraComplemento;
 
 
@@ -17,7 +17,7 @@ public class Direccion {
         this.ciudad =  datosDireccion.ciudad();
         this.calle = Integer.parseInt(datosDireccion.calle());
         this.carrera = Integer.parseInt(datosDireccion.carrera());
-        this.complemento = Integer.parseInt(datosDireccion.complemento());
+        this.complemento = (datosDireccion.complemento() != null) ? Integer.parseInt(datosDireccion.complemento()) : null;
         this.letraComplemento = datosDireccion.letraComplemento();
     }
 }

@@ -16,11 +16,9 @@ public record DatosDireccion(
         @Positive
         String carrera,
 
-        @NotEmpty
         @Positive
         String complemento,
 
-        @NotEmpty
         @Pattern(regexp = "^[a-z]$", flags = Pattern.Flag.CASE_INSENSITIVE)
         String letraComplemento
 ) {
