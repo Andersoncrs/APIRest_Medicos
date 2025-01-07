@@ -18,25 +18,23 @@ public class MedicoController {
     private MedicoService service;
 
     @GetMapping
-    public PagedModel<EntityModel<ListarMedico>> listarMedicos(Pageable pageable){
+    public PagedModel<EntityModel<ListarMedico>> listarMedicos(Pageable pageable) {
         return service.ListarMedico(pageable);
     }
 
     @PostMapping
-    public ResponseEntity<String> registrarMedico(@Valid @RequestBody DatosRegistroMedico datosRegistroMedico){
+    public ResponseEntity<String> registrarMedico(@Valid @RequestBody DatosRegistroMedico datosRegistroMedico) {
         return service.registrarMedico(datosRegistroMedico);
     }
 
     @PatchMapping
-    public ResponseEntity<Object> actalizarMedico(@Valid @RequestBody DatosActualizarMedico datosActualizarMedico){
+    public ResponseEntity<Object> actalizarMedico(@Valid @RequestBody DatosActualizarMedico datosActualizarMedico) {
         return service.ActualizarDatosMedico(datosActualizarMedico);
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<String> eliminarMedico(@PathVariable Long id){
+    public ResponseEntity<String> eliminarMedico(@PathVariable Long id) {
         return service.eliminarRegistroMedico(id);
     }
-
-
 
 }

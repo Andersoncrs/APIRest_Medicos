@@ -11,9 +11,9 @@ public enum Especialidad {
         this.especialidad = especialidad;
     }
 
-    public static Especialidad ofString(String especialidad){
+    public static Especialidad ofString(String especialidad) {
         for (Especialidad value : values()) {
-            if(value.especialidad.equalsIgnoreCase(especialidad)){
+            if (value.especialidad.equalsIgnoreCase(especialidad)) {
                 return value;
             }
         }

@@ -9,9 +9,9 @@ public enum Genero {
         this.genero = genero;
     }
 
-    public static Genero ofString(String genero){
+    public static Genero ofString(String genero) {
         for (Genero value : values()) {
-            if(value.genero.equalsIgnoreCase(genero)){
+            if (value.genero.equalsIgnoreCase(genero)) {
                 return value;
             }
         }

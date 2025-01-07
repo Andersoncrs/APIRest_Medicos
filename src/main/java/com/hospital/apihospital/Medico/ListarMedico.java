@@ -11,7 +11,7 @@ public record ListarMedico(
         Genero genero,
         Especialidad especialidad,
         Direccion direccion
-){
+) {
     public ListarMedico(Medico medico) {
         this(
                 medico.getId(),
@@ -20,6 +20,6 @@ public record ListarMedico(
                 medico.getGenero(),
                 medico.getEspecialidad(),
                 medico.getDireccion()
-                );
+        );
     }
 }
