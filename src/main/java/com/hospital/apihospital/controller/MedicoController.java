@@ -15,7 +15,7 @@ public class MedicoController {
 
 
     @Autowired
-    MedicoService service;
+    private MedicoService service;
 
     @GetMapping
     public PagedModel<EntityModel<ListarMedico>> listarMedicos(Pageable pageable){

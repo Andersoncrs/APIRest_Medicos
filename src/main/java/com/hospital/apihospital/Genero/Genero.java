@@ -3,7 +3,7 @@ package com.hospital.apihospital.Genero;
 public enum Genero {
     MASCULINO("masculino"),
     FEMENINO("femenino");
-    private String genero;
+    private final String genero;
 
     Genero(String genero) {
         this.genero = genero;

@@ -1,6 +1,5 @@
 package com.hospital.apihospital.Medico;
 
-import com.fasterxml.jackson.annotation.JsonInclude;
 import com.hospital.apihospital.Direccion.Direccion;
 import com.hospital.apihospital.Genero.Genero;
 

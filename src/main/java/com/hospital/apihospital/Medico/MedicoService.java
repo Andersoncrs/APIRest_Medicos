@@ -19,7 +19,7 @@ import java.util.Optional;
 public class MedicoService {
 
     @Autowired
-    MedicoRepository medicoRepository;
+    private MedicoRepository medicoRepository;
 
     @Autowired
     private PagedResourcesAssembler<ListarMedico> pagedResourcesAssembler;

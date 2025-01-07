@@ -5,7 +5,7 @@ public enum Especialidad {
     PEDIATRIA("Pediatria"),
     CARDIOLOGIA("Cardiologia");
 
-    private String especialidad;
+    private final String especialidad;
 
     Especialidad(String especialidad) {
         this.especialidad = especialidad;
