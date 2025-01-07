@@ -33,8 +33,8 @@ public class MedicoController {
     }
 
     @DeleteMapping("/{id}")
-    public void eliminarMedico(@PathVariable Long id){
-        service.eliminarRegistroMedico(id);
+    public ResponseEntity<String> eliminarMedico(@PathVariable Long id){
+        return service.eliminarRegistroMedico(id);
     }
 
 

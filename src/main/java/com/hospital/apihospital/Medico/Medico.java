@@ -33,6 +33,9 @@ public class Medico {
     @Setter
     private Direccion direccion;
 
+    @Setter
+    private int activo;
+
     public Medico(DatosRegistroMedico datosRegistroMedico) {
         this.nombre = datosRegistroMedico.nombre();
         this.email = datosRegistroMedico.email();
@@ -41,5 +44,6 @@ public class Medico {
         this.genero = Genero.ofString(datosRegistroMedico.genero());
         this.especialidad = Especialidad.ofString(datosRegistroMedico.especialidad());
         this.direccion = new Direccion(datosRegistroMedico.direccion());
+        this.activo = 1;
     }
 }
